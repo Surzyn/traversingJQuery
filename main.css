@@ -29,3 +29,7 @@ input, select{
     border:none;
     font-size: 1.5rem;
 }
+
+.selected{
+    border-color: red!important;
+}

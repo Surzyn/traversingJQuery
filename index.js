@@ -43,23 +43,24 @@ function changeBorder() {
 
 
 function clearBorder() {
-    $('#example *').css({ 'border-color': 'black' });
-    $('#example').css({ 'border': 'lime 1px solid' });
+    $('#example *').removeClass('selected');
+    $('#example').removeClass('selected');
 }
 
 var traversing = {
-    parent: (target) => { $(target).parent().css({ 'border-color': 'red' }); },
-    parents: (target) => { $(target).parents().css({ 'border-color': 'red' }); },
-    parentsUntil: (target, el) => { $(target).parentsUntil(el).css({ 'border-color': 'red' }); },
-    children: (target) => { $(target).children().css({ 'border-color': 'red' }); },
-    find: (target, el) => { $(target).find(el).css({ 'border-color': 'red' }); },
-    siblings: (target) => { $(target).siblings().css({ 'border-color': 'red' }); },
-    next: (target) => { $(target).next().css({ 'border-color': 'red' }); },
-    nextAll: (target) => { $(target).nextAll().css({ 'border-color': 'red' }); },
-    nextUntil: (target, el) => { $(target).nextUntil(el).css({ 'border-color': 'red' }); },
-    first: (target) => { $(target).first().css({ 'border-color': 'red' }); },
-    last: (target) => { $(target).last().css({ 'border-color': 'red' }); },
-    eq: (target, el) => { $(target).eq(el).css({ 'border-color': 'red' }); },
-    not: (target, el) => { $(target).not(el).css({ 'border-color': 'red' }); },
-    filter: (target, el) => { $(target).filter(el).css({ 'border-color': 'red' }); },
+    parent: (target) => { $(target).parent().addClass('selected'); },
+    parents: (target) => { $(target).parents().addClass('selected'); },
+    parentsUntil: (target, el) => { $(target).parentsUntil(el).addClass('selected'); },
+    children: (target) => { $(target).children().addClass('selected'); },
+    find: (target, el) => { $(target).find(el).addClass('selected'); },
+    siblings: (target) => { $(target).siblings().addClass('selected'); },
+    next: (target) => { $(target).next().addClass('selected'); },
+    nextAll: (target) => { $(target).nextAll().addClass('selected'); },
+    nextUntil: (target, el) => { $(target).nextUntil(el).addClass('selected'); },
+    first: (target) => { $(target).first().addClass('selected'); },
+    last: (target) => { $(target).last().addClass('selected'); },
+    eq: (target, el) => { $(target).eq(el).addClass('selected'); },
+    not: (target, el) => { $(target).not(el).addClass('selected'); },
+    filter: (target, el) => { $(target).filter(el).addClass('selected'); },
 }
+
